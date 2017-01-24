@@ -45,13 +45,14 @@ function puntos() {
             console.log(elem);
             $("#tabla").prepend(elem);
             $("#start").fadeIn();
-            
+
         }
     });
 }
 function start2() {
 
     $("#puntos").fadeOut();
+    $("#gameOver").fadeOut();
     $("#fondo").fadeIn(5000);
     $("#hud").fadeIn(5000);
     $("#espai").fadeIn(5000);
@@ -83,16 +84,19 @@ function start2() {
                     left: '+=100'
                 });
                 break;
+            case 72:
+                
+                break;
         }
     });
     time();
 }
-function time(){
-    
-    interval= window.setInterval(meteoro,2000);
+function time() {
+
+    interval = window.setInterval(meteoro, 2000);
 }
-function meteoro(){
-    
+function meteoro() {
+
     var meteorito = $("<img src='Tie-Fighter-01-icon.png' class='enemy'/>");
     $("#espai").append(meteorito);
     var dis = $("#espai").width() - meteorito.width();
@@ -106,45 +110,58 @@ function meteoro(){
             top = respuesta.random;
             //console.log(respuesta.random);
             console.log(top);
-            meteorito.css({"left":dis,"top" : top+"px"});
-    
-    meteorito.animate({
-        left : '0'
-        },{
-        duration: 4000,
-        step: function (now, fx) {
-                            //puntuacion
-                            $("#points").html(points);
-                            //comprobar colision
-                            if ($(meteorito).hittest($(nave))) {
-                                meteorito.remove();
-                                $("#salud").animate({
-                                    "width": "-=20"
-                                },
-                                        {
-                                            step: function (now, fx) {
-                                                if ($("#salud").width() < 5) {
-                                                    clearInterval(interval);
-                                                    nave.stop();
-                                                    window.clearInterval(interval);
-                                                    $("#gameOver").fadeIn(5000);
-                                                    $("#espai").fadeOut();
-                                                    $("#hud").fadeOut();
-                                                    final();
-                                                }
-                                            }
-                                        });
-                            }
+            meteorito.css({"left": dis, "top": top + "px"});
+
+            meteorito.animate({
+                left: '0'
+            }, {
+                duration: 3000,
+                step: function (now, fx) {
+                    //puntuacion
+                    $("#points").html(points);
+                    //comprobar colision
+                    if ($(meteorito).hittest($(nave))) {
+                        meteorito.remove();
+                        $("#salud").animate({
+                            "width": "-=20"
                         },
-        complete : function(){
-            points++;
-            meteorito.remove();
-        }
-        
-    });
+                        {
+                            step: function (now, fx) {
+                                if ($("#salud").width() < 5) {
+                                    clearInterval(interval);
+                                    nave.stop();
+                                    window.clearInterval(interval);
+                                    $("#gameOver").fadeIn(5000);
+                                    $("#espai").fadeOut();
+                                    $("#hud").fadeOut();
+                                    final();
+                                }
+                            }
+                        });
+                    }
+                },
+                complete: function () {
+                    points++;
+                    meteorito.remove();
+                }
+
+            });
         }
     });
 }
-function final(){
-    
+function final() {
+    $.ajax({
+        type: "POST",
+        url: "espacio.php",
+        dataType: "json",
+        data: {"posicion": source, "puntuacion": points},
+        success: function (respuesta) {
+            $("#tabla").remove("ul");
+            puntos();
+        }
+    });
+    $("#salud").css({
+        "width": "250"
+    });
+    $("#puntos").fadeIn();
 }
