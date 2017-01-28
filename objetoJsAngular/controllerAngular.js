@@ -22,11 +22,4 @@ app.controller("control", ["$scope", "datos"
                 $scope.addCar = function(){
                     datos.addCar($scope.conSelect,$scope.inputnc,$scope.inputpc,$scope.inputmc);
                 };
-                $scope.posicion = function (posicion) {
-                    for(var i = 0; i < $scope.concesionarios.length; i++){
-                        if($scope.concesionarios[i].nombre == posicion.nombre){
-                            return i;
-                        }
-                    }
-                }
             }]);

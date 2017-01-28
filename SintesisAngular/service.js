@@ -133,14 +133,15 @@ document.write("<br>");
 app.service('datos', function () {
 
     this.teams = [];
+    this.teams.push(team);
 
     this.createTeam = function (nombre, victorias, derrotas, game) {
 
         var t = new Team(nombre, victorias, derrotas, game);
-        teams.push(t);
-    }
+        this.teams.push(t);
+    };
     this.createPlayer = function () {
 
-    }
+    };
 
 });
