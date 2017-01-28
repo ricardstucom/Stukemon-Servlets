@@ -6,22 +6,31 @@ function Team(nombre,victorias,derrotas,game) {
     this.players = [];
 
     this.addPlayer = function(player){
-        this.players[player.nombre] = player;
+        this.players.push(player);
     }
 
     this.getPlayer = function(name){
-
-        return this.players[name];
+        var player = new Player();
+        for(var key in this.players) {
+            if(this.players[key].nombre == name) {
+                return this.players[key];
+            }
+        }
+        return player;
     }
 
     this.delPlayer = function(name){
-        this.players.splice(name,1);
+        for(var key in this.players) {
+            if(this.players[key].nombre == name) {
+                this.players.splice(key, 1);
+            }
+        }
     }
     this.getPlayerMax = function(){
-        var max = new Player;
-        for(key in this.players){
-            if(max.puntos < key.puntos){
-                max = key;
+        var max = new Player();
+        for(var key in this.players){
+            if(max.puntos < this.players[key].puntos){
+                max = this.players[key];
             }
         }
         return max;
@@ -94,11 +103,33 @@ document.write("<br>");
 
 
 var max = team.getPlayerMax();
-document.write(max);
+document.write("maxPlayer");
+document.write("<br>");
+document.write("nick: "+max.nick);
+document.write("<br>");
+document.write("nombre: "+max.nombre);
+document.write("<br>");
+document.write("funcion: "+max.funcion);
+document.write("<br>");
+document.write("puntos: "+max.puntos);
+document.write("<br>");
 
-team.getPlayer("alex").updatePlayer("","",0);
+
+
+max = team.getPlayer("alexonte");
+max.updatePlayer("","",999)
 max = team.getPlayerMax();
-document.write(max);
+document.write("maxPlayerUpdated");
+document.write("<br>");
+document.write("nick: "+max.nick);
+document.write("<br>");
+document.write("nombre: "+max.nombre);
+document.write("<br>");
+document.write("funcion: "+max.funcion);
+document.write("<br>");
+document.write("puntos: "+max.puntos);
+document.write("<br>");
+
 
 app.service("serv", function () {
 
