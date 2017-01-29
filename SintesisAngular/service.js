@@ -7,7 +7,7 @@ function Team(nombre, victorias, derrotas, game) {
 
     this.addPlayer = function (player) {
         this.players.push(player);
-    }
+    };
 
     this.getPlayer = function (name) {
         var player = new Player();
@@ -17,15 +17,15 @@ function Team(nombre, victorias, derrotas, game) {
             }
         }
         return player;
-    }
+    };
 
-    this.delPlayer = function (name) {
+    this.delPlayer = function (nick) {
         for (var key in this.players) {
-            if (this.players[key].nombre == name) {
+            if (this.players[key].nick == nick) {
                 this.players.splice(key, 1);
-            }
+            } else {}
         }
-    }
+    };
     this.getPlayerMax = function () {
         var max = new Player();
         for (var key in this.players) {
@@ -140,8 +140,28 @@ app.service('datos', function () {
         var t = new Team(nombre, victorias, derrotas, game);
         this.teams.push(t);
     };
-    this.createPlayer = function () {
+    this.createPlayer = function (nick, nombre, funcion, puntos, team) {
 
+        var p = new Player(nick, nombre, funcion, puntos);
+        console.log(p);
+        if (team == null) {
+            console.log("sin equipo");
+        } else {
+            var esta = false;
+            for (key in this.teams[team].players) {
+                if(this.teams[team].players[key].nick == nick){
+                    p.updatePlayer(nombre,funcion,puntos);
+                    esta = true;
+                }
+            }
+            if(esta == false){
+                this.teams[team].addPlayer(p);
+                console.log("jugador añadido");
+            }else{}
+        }
     };
+    this.delPlayer =  function (nick,team) {
+        this.teams[team].delPlayer(nick);
+    }
 
 });

@@ -35,18 +35,15 @@
             <div ng-click="addTeam()">Crear equipo</div>
         </div>
         <div class="col-lg-6">
-            Jugador: <input>
+            Jugador: <input ng-model="jugadorn">
             <br>
-            puntos: <input>
+            puntos:  <input ng-model="jugadorp">
             <br>
-            nick: <input>
+            nick:    <input ng-model="jugadorni">
             <br>
-            Funcion principal: <input>
+            Funcion principal: <input ng-model="jugadorf">
             <br>
-            <button>Añadir/Modificar jugadores</button>
-        </div>
-        <div class="col-lg-6">
-
+            <div ng-click="changePlayer()">Añadir/Modificar jugadores</div>
         </div>
     </div>
     <div class="row">
@@ -85,15 +82,15 @@
                     Funcion
                 </div>
             </div>
-        </div>{{teams[selected]}}
-        <div class="row" ng-repeat="key in teams[selected].players">
+        </div>
+        <div class="row" ng-repeat="key in teams[selected].players track by $index">
             <div class="col-xs-1">
-                <button ng-value="">Eliminar</button>
+                <div ng-click="borrar(key.nick, selected)">{{borrar}}Eliminar</div>
             </div>
             <div class="col-xs-2">
                 {{key.puntos}}
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-3" ng-click="rellenar($index,selected)">
                 {{key.nick}}
             </div>
             <div class="col-xs-3">

@@ -8,7 +8,22 @@ app.controller("control", ["$scope", "datos"
         $scope.algo = "algo";
         $scope.teams = datos.teams;
 
-        $scope.addTeam = function(equipon,equipov,equipod,equipoj){
-            datos.addTeam(equipon,equipov,equipod,equipoj);
+        $scope.addTeam = function(){
+            datos.createTeam($scope.equipon,$scope.equipov,$scope.equipod,$scope.equipoj);
+        }
+        $scope.changePlayer = function(){
+            //TODO update no va
+            datos.createPlayer($scope.jugadorni, $scope.jugadorn, $scope.jugadorf, $scope.jugadorp,$scope.selected);
+        }
+        $scope.borrar = function (nick,selected) {
+            datos.delPlayer(nick,selected);
+        }
+        $scope.rellenar = function (index,team) {
+            var p = $scope.teams[team].players[index];
+
+            $scope.jugadorn = p.nombre;
+            $scope.jugadorni = p.nick;
+            $scope.jugadorp = p.puntos;
+            $scope.jugadorf = p.funcion;
         }
     }]);

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aaf15bd-8e7f-45c9-be44-2b80b78daecb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SintesisAngular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pruebaAngular/controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pruebaAngular/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SintesisAngular/controller.js" afterPath="$PROJECT_DIR$/SintesisAngular/controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SintesisAngular/service.js" afterPath="$PROJECT_DIR$/SintesisAngular/service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SintesisAngular/sintesis.html" afterPath="$PROJECT_DIR$/SintesisAngular/sintesis.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objetoJsAngular/controllerAngular.js" afterPath="$PROJECT_DIR$/objetoJsAngular/controllerAngular.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objetoJsAngular/objetoAngular.html" afterPath="$PROJECT_DIR$/objetoJsAngular/objetoAngular.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +24,8 @@
       <file leaf-file-name="sintesis.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SintesisAngular/sintesis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state relative-caret-position="272">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -38,8 +34,8 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SintesisAngular/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +44,8 @@
       <file leaf-file-name="service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SintesisAngular/service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="140" column="27" lean-forward="true" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
+            <state relative-caret-position="595">
+              <caret line="153" column="32" lean-forward="true" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -58,8 +54,8 @@
       <file leaf-file-name="objetoAngular.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objetoJsAngular/objetoAngular.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="561">
+              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -113,11 +109,11 @@
         <option value="$PROJECT_DIR$/SintesisAngular/estructuraClases.js" />
         <option value="$PROJECT_DIR$/pruebaAngular/index.html" />
         <option value="$PROJECT_DIR$/pruebaAngular/controller.js" />
-        <option value="$PROJECT_DIR$/objetoJsAngular/objetoAngular.html" />
         <option value="$PROJECT_DIR$/objetoJsAngular/controllerAngular.js" />
-        <option value="$PROJECT_DIR$/SintesisAngular/service.js" />
+        <option value="$PROJECT_DIR$/objetoJsAngular/objetoAngular.html" />
         <option value="$PROJECT_DIR$/SintesisAngular/controller.js" />
         <option value="$PROJECT_DIR$/SintesisAngular/sintesis.html" />
+        <option value="$PROJECT_DIR$/SintesisAngular/service.js" />
       </list>
     </option>
   </component>
@@ -353,7 +349,7 @@
       <workItem from="1485283757417" duration="1824000" />
       <workItem from="1485360592346" duration="4450000" />
       <workItem from="1485531798017" duration="7629000" />
-      <workItem from="1485608050931" duration="15554000" />
+      <workItem from="1485608050931" duration="22606000" />
     </task>
     <task id="LOCAL-00001" summary="POR FIN">
       <created>1485284070827</created>
@@ -376,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485616167674</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="segundo punto">
+      <created>1485633534695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1485633534695</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31309000" />
+    <option name="totallyTimeSpent" value="38361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -741,26 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SintesisAngular/service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="140" column="27" lean-forward="true" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/objetoJsAngular/objetoAngular.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SintesisAngular/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="561">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -773,10 +760,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SintesisAngular/service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="153" column="32" lean-forward="true" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SintesisAngular/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SintesisAngular/sintesis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="272">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>

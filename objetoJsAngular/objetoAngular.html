@@ -28,10 +28,6 @@
             <div class="row">
                 <div class="col-xs-4">
                     <h3>Nombre:</h3>
-                    <!--<select ng-model="conSelect">-->
-                        <!--<option value="0"> {{concesionarios[0].nombre}}</option>-->
-                        <!--<option value="1"> {{concesionarios[1].nombre}}</option>-->
-                    <!--</select>-->
                     <select ng-model="conSelect">
                         <option ng-repeat="key in concesionarios track by $index" ng-value="$index">{{key.nombre}}</option>
                     </select>
