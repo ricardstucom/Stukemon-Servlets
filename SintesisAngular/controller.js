@@ -26,4 +26,16 @@ app.controller("control", ["$scope", "datos"
             $scope.jugadorp = p.puntos;
             $scope.jugadorf = p.funcion;
         }
+
+
+        $scope.ordenar = function(objeto){
+            $scope.orden = false;
+            $scope.objeto = objeto;
+
+            if($scope.objeto == true){
+                $scope.orden = false;
+            }else{
+                $scope.orden = true;
+            }
+        }
     }]);

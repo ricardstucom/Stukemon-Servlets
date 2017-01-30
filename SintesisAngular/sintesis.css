@@ -1,0 +1,20 @@
+#div1>div{
+    border: solid black 1px;
+}
+#cosas{
+    border: solid black 1px;
+}
+#form{
+    text-align: center;
+}
+#form>div{
+    border: solid black 1px;
+    text-align: center;
+}
+#form>div>div{
+    border: solid black 1px;
+    text-align: center;
+}
+#title{
+    text-align: center;
+}

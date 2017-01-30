@@ -44,6 +44,7 @@ function Player(nick, nombre, funcion, puntos) {
     this.puntos = puntos || 0;
 
     this.updatePlayer = function (nombre, funcion, puntos) {
+        console.log("entro");
         if (nombre != "") {
             this.nombre = nombre;
         }
@@ -53,6 +54,8 @@ function Player(nick, nombre, funcion, puntos) {
         if (puntos != 0) {
             this.puntos = puntos;
         }
+        console.log(this);
+        return this;
     }
 }
 
@@ -151,6 +154,7 @@ app.service('datos', function () {
             for (key in this.teams[team].players) {
                 if(this.teams[team].players[key].nick == nick){
                     p.updatePlayer(nombre,funcion,puntos);
+                    this.teams[team].players[key] = p;
                     esta = true;
                 }
             }
