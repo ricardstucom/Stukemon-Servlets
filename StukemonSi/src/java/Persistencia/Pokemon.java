@@ -39,6 +39,7 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Pokemon.findByDefense", query = "SELECT p FROM Pokemon p WHERE p.defense = :defense")
     , @NamedQuery(name = "Pokemon.findBySpeed", query = "SELECT p FROM Pokemon p WHERE p.speed = :speed")
     , @NamedQuery(name = "Pokemon.findByLife", query = "SELECT p FROM Pokemon p WHERE p.life = :life")
+    , @NamedQuery(name = "Pokemon.deleteByNombre", query = "DELETE FROM Pokemon p WHERE p.name = :name")
     , @NamedQuery(name = "Pokemon.findByLevel", query = "SELECT p FROM Pokemon p WHERE p.level = :level")})
 public class Pokemon implements Serializable {
 
@@ -230,5 +231,5 @@ public class Pokemon implements Serializable {
     public String toString() {
         return "Persistencia.Pokemon[ name=" + name + " ]";
     }
-    
+
 }

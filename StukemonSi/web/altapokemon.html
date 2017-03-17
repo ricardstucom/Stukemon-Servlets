@@ -11,22 +11,15 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-     
-        <form action="altaentrenador.html" method="POST">
-            <input type="submit" value="Alta Entrenador"/>
-        </form>
-        
         <form action="AltaPokemon" method="POST">
-            <input type="submit" value="Alta Pokemon"/>
+            <p> Nombre: <input type="text" name="name" required></p>
+            <p> Tipo <input type="text" name="tipo" required></p>
+            <p> Habilidad: <input type="text" name="habilidad" required></p>
+            <p>Velocidad: <input type="number" name="velocidad" required></p>
+            <p>Vida: <input type="number" name="vida" required></p>
             
-        </form>
-        <form action="BorrarPokemon" method="POST">
-            <input type="submit" value="Borrar Pokemon"/>
-            
-        </form>
-         <form action="Batalla" method="POST">
-            <input type="submit" value="Batalla"/>
-            
+            <input type="submit" value="alta">
+
         </form>
     </body>
 </html>

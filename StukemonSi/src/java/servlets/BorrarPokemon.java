@@ -5,13 +5,15 @@
  */
 package servlets;
 
+import Persistencia.Pokemon;
 import Persistencia.Trainer;
 import beans.EjemploEJB;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.Integer.parseInt;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +22,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 46989075Y
  */
-public class AltaEntrenador extends HttpServlet {
+@WebServlet(name = "BorrarPokemon", urlPatterns = {"/BorrarPokemon"})
+public class BorrarPokemon extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,6 +36,7 @@ public class AltaEntrenador extends HttpServlet {
      */
     @EJB
     EjemploEJB miEjb;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -41,26 +45,25 @@ public class AltaEntrenador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet EjemploServlet</title>");            
+            out.println("<title>Servlet BorrarPokemon</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet EjemploServlet at " + request.getContextPath() + "</h1>");
-          
-            //CREAMOS EL ENTRENADOR
-            String name = request.getParameter("name");
-           int nstuballs = parseInt(request.getParameter("nstuballs"));
-           int npocionescuracion = parseInt(request.getParameter("npocionescuracion"));
-           int puntos = 0;
-           Trainer t = new Trainer(name,nstuballs,npocionescuracion,puntos);
-           //TRAEMOS LOS 
-           if(miEjb.insertarEntrendor(t)){
-             out.println("<p>ENTRENADOR AÑADIDO</p>");
-           }else{
-               out.println("<p>Ya existe el entrenador</p>");
-           }
-         
+            out.println("<h1>Servlet BorrarPokemon at " + request.getContextPath() + "</h1>");
+            out.println(" <form action=\"BorrarPokemon\" method=\"POST\">");
+            List<Pokemon> pokemons = miEjb.selectAllPokemon();
+            out.println("<p><select name=\"pokemon\">");
+
+            for (Pokemon c : pokemons) {
+
+                out.println("<option value=\"" + c.getName() + "\">" + c.getName() + "</option>");
+
+            }
+
+            out.println("</select></p>");
+            out.println(" <input type=\"submit\" value=\"borrar\">");
+            String name = request.getParameter("pokemon");
             
-            
+             miEjb.deletePokemonByNombre(name);
             
             out.println("</body>");
             out.println("</html>");
